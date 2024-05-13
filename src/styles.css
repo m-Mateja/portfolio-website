@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: mateja-custom-font-bold, sans-serif; background-color: #121212;}
+
+.primary-color{
+  background-color: darkorange;
+}
+
+.mdc-button.mdc-button--raised.mat-mdc-raised-button{
+  margin:5px;
+  border-radius: 70px;
+  background-color: darkorange;
+}
+
+/*Animations*/
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

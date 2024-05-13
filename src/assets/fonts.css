@@ -1,0 +1,8 @@
+@font-face {
+  font-family: mateja-custom-font-bold;
+  src: url("/assets/GothamBold.ttf");
+}
+@font-face {
+  font-family: mateja-custom-font-medium;
+  src: url("/assets/GothamMedium.ttf");
+}
