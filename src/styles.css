@@ -7,8 +7,23 @@ body { margin: 0; font-family: mateja-custom-font-bold, sans-serif; background-c
   background-color: darkorange;
 }
 
+.big-header{
+  font-family: mateja-custom-font-bold, sans-serif;
+  font-size: 54px;
+  color: aliceblue;
+  margin: 25px;
+}
+
+.grid-1-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
 .mdc-button.mdc-button--raised.mat-mdc-raised-button{
-  margin:5px;
+  margin :5px;
   border-radius: 70px;
   background-color: darkorange;
 }
