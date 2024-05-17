@@ -1,0 +1,10 @@
+.nav-container{
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 0;
+  animation: fallFromTop 1s ease-out;
+}
