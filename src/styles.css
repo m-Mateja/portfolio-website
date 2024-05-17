@@ -1,17 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: mateja-custom-font-bold, sans-serif; background-color: #121212;}
+body { margin: 0; font-family: Montserrat, sans-serif; background-color: #121212;}
 
 .primary-color{
   background-color: darkorange;
 }
 
+.flex-center-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .big-header{
-  font-family: mateja-custom-font-bold, sans-serif;
-  font-size: 54px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 130px;
+  text-transform: none;
+  font-size: 10vw;
   color: aliceblue;
-  margin: 25px;
+  margin: 2vw;
+  animation: flipIn 0.7s ease-in-out forwards;
 }
 
 .grid-1-2{
@@ -25,7 +37,7 @@ body { margin: 0; font-family: mateja-custom-font-bold, sans-serif; background-c
 .mdc-button.mdc-button--raised.mat-mdc-raised-button{
   margin :5px;
   border-radius: 70px;
-  background-color: darkorange;
+  background-color: #FF5733;
 }
 
 /*Animations*/
@@ -39,5 +51,55 @@ body { margin: 0; font-family: mateja-custom-font-bold, sans-serif; background-c
     opacity: 1;
   }
 }
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(255, 140, 0, 0.7);
+  }
+}
+
 
 

@@ -1,18 +1,26 @@
-import { Component } from '@angular/core';
-import {MatGridList, MatGridTile} from "@angular/material/grid-list";
-import {MatButton} from "@angular/material/button";
+import {Component, OnInit} from '@angular/core';
+import { ParticlesConfig } from '../../specials/particles-config';
+import {MatIconModule} from "@angular/material/icon";
+import {MatIconButton} from "@angular/material/button";
 
+declare let particlesJS: any;
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [
-    MatGridList,
-    MatGridTile,
-    MatButton
-  ],
+  imports: [MatIconModule, MatIconButton],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.css'
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements OnInit{
 
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.invokeParticles()
+  }
+
+  invokeParticles(): void {
+    particlesJS('particles-js', ParticlesConfig, function() {})
+  }
 }
