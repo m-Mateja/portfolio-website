@@ -4,6 +4,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule, MatIconButton} from "@angular/material/button";
 import {CommonModule} from "@angular/common";
 import {MatChipsModule} from "@angular/material/chips";
+import {UtilsService} from "../../services/utils.service";
 declare let particlesJS: any;
 
 @Component({
@@ -15,14 +16,17 @@ declare let particlesJS: any;
 })
 export class HeroSectionComponent implements OnInit{
 
-  constructor() {
+  constructor(public utilService: UtilsService) {
   }
-
   ngOnInit() {
     this.invokeParticles()
   }
 
   invokeParticles(): void {
     particlesJS('particles-js', ParticlesConfig, function() {})
+  }
+
+  downArrowClick(){
+    this.utilService.downArrowEvent('click')
   }
 }

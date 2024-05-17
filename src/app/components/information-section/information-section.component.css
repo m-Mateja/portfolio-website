@@ -1,0 +1,7 @@
+.information-section{
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray; /* Adjust as needed */
+}
