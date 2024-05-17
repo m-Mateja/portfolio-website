@@ -1,5 +1,4 @@
 <div class="cool-section">
-  <label class="medium-header" style="margin:1vh">Keep Scrolling for Cool Angular Stuff...</label>
   <mat-card class="cool-card-style">
     <mat-card-header>
       <mat-card-title style="margin-left:3vh; font-size: 24px; margin-bottom: 1vh; color: aliceblue">Your Stats</mat-card-title>
@@ -37,8 +36,12 @@
 
       <div class="flex-center-flex-start" style="margin-top:2vh">
         <label class="small-header">Should you hire me:</label>
+        <div style="margin-left:20px">
+          <button mat-raised-button (click)="yesClick()">Yes</button>
+          <button mat-raised-button (click)="noClick()">No</button>
+        </div>
         <label class="small-header" style="color: #FF5733;">
-          Yes
+          {{hireSelection}}
         </label>
       </div>
 

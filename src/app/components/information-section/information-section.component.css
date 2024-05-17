@@ -1,5 +1,5 @@
 .information-section{
-  height: 100vh;
+  /*height: 100%;*/
   background-color: lightgray;
   display: flex;
   flex-direction: column;
