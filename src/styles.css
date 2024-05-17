@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Montserrat, sans-serif; background-color: #121212;}
+body { margin: 0; font-family: "mateja-custom-font-bold"; background-color: #121212;}
 
 .primary-color{
   background-color: darkorange;
@@ -11,19 +11,36 @@ body { margin: 0; font-family: Montserrat, sans-serif; background-color: #121212
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-center-flex-start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .big-header{
-  font-family: Montserrat, sans-serif;
+  font-family: "mateja-custom-font-bold";
   font-style: normal;
   font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: -10px;
   line-height: 130px;
   text-transform: none;
-  font-size: 10vw;
+  font-size: 15vw;
   color: aliceblue;
-  margin: 2vw;
-  animation: flipIn 0.7s ease-in-out forwards;
+  margin: 2.5vw 0 3.5vw 0;
+}
+
+.fly-in-right{
+  animation: flyInFromLeft 1s ease-in-out forwards;
+}
+.fly-in-left{
+  animation: flyInFromRight 1s ease-in-out forwards;
+}
+.fly-in-up{
+  animation: flyInFromBottom 1s ease-in-out forwards;
 }
 
 .grid-1-2{
@@ -52,16 +69,39 @@ body { margin: 0; font-family: Montserrat, sans-serif; background-color: #121212
   }
 }
 
-@keyframes flipIn {
+@keyframes flyInFromLeft {
   0% {
-    transform: rotateX(90deg);
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    transform: rotateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
+
+@keyframes flyInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 @keyframes bounceIn {
   0% {
@@ -85,7 +125,7 @@ body { margin: 0; font-family: Montserrat, sans-serif; background-color: #121212
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(-30%);
+    transform: translateY(-10%);
   }
   50% {
     transform: translateY(0);
