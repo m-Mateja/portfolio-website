@@ -3,3 +3,7 @@ export interface Experience{
   locationAndDate: string,
   body: any
 }
+
+export interface AllExperiences{
+  experiences: Experience[]
+}

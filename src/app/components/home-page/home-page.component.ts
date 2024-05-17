@@ -5,11 +5,12 @@ import {MatButton} from "@angular/material/button";
 import {HeroSectionComponent} from "../hero-section/hero-section.component";
 import {InformationSectionComponent} from "../information-section/information-section.component";
 import {UtilsService} from "../../services/utils.service";
+import {CoolSectionComponent} from "../cool-section/cool-section.component";
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, MatButton, HeroSectionComponent, InformationSectionComponent],
+  imports: [RouterOutlet, NavComponent, MatButton, HeroSectionComponent, InformationSectionComponent, CoolSectionComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })

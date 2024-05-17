@@ -34,6 +34,18 @@ body { margin: 0; font-family: "mateja-custom-font-bold"; background-color: #121
   margin: 2.5vw 0 3.5vw 0;
 }
 
+.medium-header{
+  font-family: "mateja-custom-font-bold";
+  font-style: normal;
+  font-weight: bold;
+  /*letter-spacing: -10px;*/
+  line-height: 130px;
+  text-transform: none;
+  font-size: 72px;
+  color: aliceblue;
+  margin: 2.5vw 0 3.5vw 0;
+}
+
 .fly-in-right{
   animation: flyInFromLeft 1s ease-in-out forwards;
 }
