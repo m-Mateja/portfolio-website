@@ -16,14 +16,23 @@
 }
 
 .hero-button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   min-height: 60px;
   min-width: 200px;
   text-align: center;
 }
 
+.button-logo {
+  width: 36px; /* Adjust size as needed */
+  height: 36px; /* Adjust size as needed */
+  margin-right: 8px; /* Space between logo and text */
+}
+
 .arrow-down{
   background: aliceblue;
-  scale: 2.5;
+  scale: 2;
   animation: bounceIn 1s ease-out, bounce 0.8s infinite;
   display: inline-flex;
   align-items: center;
