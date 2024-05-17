@@ -44,5 +44,5 @@
 }
 
 .arrow-down:hover {
-  animation: grow 0.3s forwards;
+  box-shadow: 0 0 10px 5px #FF5733;
 }

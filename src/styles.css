@@ -135,10 +135,10 @@ body { margin: 0; font-family: "mateja-custom-font-bold"; background-color: #121
 
 @keyframes grow {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+    box-shadow: 0 0 0 0 #FF5733;
   }
   100% {
-    box-shadow: 0 0 10px 5px rgba(255, 140, 0, 0.7);
+    box-shadow: 0 0 10px 5px #FF5733;
   }
 }
 

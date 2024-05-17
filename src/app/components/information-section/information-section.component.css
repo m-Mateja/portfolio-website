@@ -1,7 +1,24 @@
 .information-section{
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: lightgray; /* Adjust as needed */
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: lightgray;
+}
+
+.card-style{
+  border-width: 3px;
+  background: lightgray;
+  border-radius: 70px;
+  margin: 5vh;
+  width: 100%;
+}
+
+.accordion-style{
+  background: #121212;
+  margin: 1vh 3vh;
+}
+
+.card-style:hover{
+  box-shadow: 0 0 10px 5px #FF5733;
 }
