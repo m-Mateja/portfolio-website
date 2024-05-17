@@ -1,6 +1,10 @@
 .information-section{
   height: 100vh;
   background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .information-section-top{
@@ -14,8 +18,8 @@
   border-width: 3px;
   background: lightgray;
   border-radius: 70px;
-  margin: 2.5vh 2.5vh 1.25vh 1.25vh;
-  width: 100%;
+  width: 95%;
+  margin: 1.5vh 0
 }
 
 .accordion-style{
