@@ -8,6 +8,7 @@ import {CommonModule} from "@angular/common";
 import {TimerService} from "../../services/timer.service";
 import {MouseDistanceService} from "../../services/mouse-distance.service";
 import {MatButtonModule} from "@angular/material/button";
+import {NoHireMap} from "../../interfaces/interfaces";
 
 @Component({
   selector: 'app-cool-section',
@@ -24,8 +25,16 @@ export class CoolSectionComponent implements OnInit{
   totalMouseDistance: number = 0;
   mouseDistanceSubscription!: Subscription;
 
-  hireSelection:string = '???'
+  hireSelection:string | undefined = '???'
   noHireClickCounter:number = 0
+
+  noHireChoice: NoHireMap[] = [
+    {clicks:0, message:'yes'},
+    {clicks:1, message:'You missed the "Yes" button!'},
+    {clicks:2, message:'Wrong one again...'},
+    {clicks:3, message:':('},
+    {clicks:4, message:'Ok, so Yes!'}
+  ]
 
   constructor(public clickService: ClickService,
               public timerService: TimerService,
@@ -52,17 +61,8 @@ export class CoolSectionComponent implements OnInit{
 
   noClick(){
     this.noHireClickCounter ++
-    if(this.noHireClickCounter == 1){
-      this.hireSelection = "You missed the Yes button"
-    }
-    else if(this.noHireClickCounter == 2){
-      this.hireSelection = "Wrong one again..."
-    }
-    else if(this.noHireClickCounter == 3){
-      this.hireSelection = ':('
-    }
-    else if(this.noHireClickCounter >3){
-      this.hireSelection = 'Ok, so Yes'
-    }
+    this.noHireClickCounter < 5 ?
+      this.hireSelection = this.noHireChoice.find((item:NoHireMap) => item.clicks == this.noHireClickCounter)?.message :
+      this.hireSelection = this.noHireChoice.find((item:NoHireMap) => item.clicks == 4)?.message
   }
 }

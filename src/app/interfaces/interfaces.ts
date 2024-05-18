@@ -7,3 +7,8 @@ export interface Experience{
 export interface AllExperiences{
   experiences: Experience[]
 }
+
+export interface NoHireMap{
+  clicks: number,
+  message: string
+}
