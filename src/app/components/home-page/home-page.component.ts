@@ -4,11 +4,10 @@ import {NavComponent} from "../nav/nav.component";
 import {MatButtonModule} from "@angular/material/button";
 import {HeroSectionComponent} from "../hero-section/hero-section.component";
 import {InformationSectionComponent} from "../information-section/information-section.component";
-import {UtilsService} from "../../services/utils.service";
 import {CoolSectionComponent} from "../cool-section/cool-section.component";
 import {ClickService} from "../../services/click.service";
-import {TimerService} from "../../services/timer.service";
-import {Subscription} from "rxjs";
+import {Title} from "@angular/platform-browser";
+
 
 @Component({
   selector: 'app-home-page',
@@ -19,12 +18,12 @@ import {Subscription} from "rxjs";
 })
 export class HomePageComponent implements OnInit{
 
-  constructor(public utilService: UtilsService,
-              public clickService: ClickService,
-              public timerService: TimerService) {
+  constructor(public clickService: ClickService,
+              private titleService: Title) {
   }
 
   ngOnInit() {
+    this.titleService.setTitle('Mateja Milovanovic Portfolio')
   }
 
   @HostListener('document:click', ['$event'])
