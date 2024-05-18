@@ -19,12 +19,12 @@ export class HeroSectionComponent implements OnInit{
   constructor(public utilService: UtilsService) {
   }
   ngOnInit() {
-    this.invokeParticles()
+    // this.invokeParticles()
   }
 
-  invokeParticles(): void {
-    particlesJS('particles-js', ParticlesConfig, function() {})
-  }
+  // invokeParticles(): void {
+  //   particlesJS('particles-js', ParticlesConfig, function() {})
+  // }
 
   downArrowClick(){
     this.utilService.downArrowEvent('click')
