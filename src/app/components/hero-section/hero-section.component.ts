@@ -22,6 +22,7 @@ export class HeroSectionComponent implements OnInit{
     this.invokeParticles()
   }
 
+  //background particles
   invokeParticles(): void {
     particlesJS('particles-js', ParticlesConfig, function() {})
   }
