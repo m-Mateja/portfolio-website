@@ -53,7 +53,7 @@ body { margin: 0; font-family: "mateja-custom-font-bold"; background-color: #121
   /*letter-spacing: -10px;*/
   line-height: 40px;
   text-transform: none;
-  font-size: 24px;
+  font-size: calc(14px + 0.5vw);
   color: aliceblue;
   display: flex;
   margin-left: 30px;
