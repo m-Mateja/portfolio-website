@@ -1,6 +1,5 @@
 .information-section{
   /*height: 100%;*/
-  background-color: lightgray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +15,7 @@
 
 .card-style{
   border-width: 3px;
-  background: lightgray;
+  background: #121212;
   border-radius: 70px;
   width: 95%;
   margin: 1.5vh 0

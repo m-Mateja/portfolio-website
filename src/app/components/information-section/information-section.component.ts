@@ -72,8 +72,8 @@ export class InformationSectionComponent implements OnInit{
     position: 'Stock Market Database',
     locationAndDate: 'Ryerson University (2021)',
     body: [
-      '- Designed web scrapers for 9 real estate websites averaging 500ms for total data collection per page.',
-      '- Leveraged techniques like multithreading, using VPNs, and smart headless browsers with Playwright to improve async scraping efficiency by 700%.'
+      '- Utilized MySQL for complex data queries and analysis.',
+      '- Developed derivative trade risk models for informed trading decisions.'
     ]
   }
   constructor(public utilService: UtilsService) {
