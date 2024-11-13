@@ -8,14 +8,17 @@
         <mat-accordion>
           <mat-expansion-panel class="accordion-style" *ngFor="let experience of allExperiences.experiences">
             <mat-expansion-panel-header>
-              <mat-panel-title style="font-size: calc(8px + 0.5vw);">
+              <mat-panel-title class="text-font-size">
                 {{experience.position}}
               </mat-panel-title>
-              <mat-panel-description>
+              <mat-panel-description *ngIf="!(isSmallScreen | async)">
                 {{experience.locationAndDate}}
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <p *ngFor="let body of experience.body">{{body}}</p>
+            <span *ngIf="(isSmallScreen | async)">
+              <ng-container *ngTemplateOutlet="locationIfSmallScreen; context: {companyAndLocation: experience.locationAndDate}"></ng-container>
+            </span>
+            <p *ngFor="let body of experience.body" class="text-font-size">{{body}}</p>
           </mat-expansion-panel>
         </mat-accordion>
       </mat-card-content>
@@ -31,14 +34,17 @@
         <mat-accordion>
           <mat-expansion-panel class="accordion-style" *ngFor="let projects of allProjects.experiences">
             <mat-expansion-panel-header>
-              <mat-panel-title style="font-size: calc(8px + 0.5vw);">
+              <mat-panel-title class="text-font-size">
                 {{projects.position}}
               </mat-panel-title>
-              <mat-panel-description>
+              <mat-panel-description *ngIf="!(isSmallScreen | async)">
                 {{projects.locationAndDate}}
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <p *ngFor="let body of projects.body">{{body}}</p>
+            <span *ngIf="(isSmallScreen | async)">
+              <ng-container *ngTemplateOutlet="locationIfSmallScreen; context: {companyAndLocation: projects.locationAndDate}"></ng-container>
+            </span>
+            <p *ngFor="let body of projects.body" class="text-font-size">{{body}}</p>
           </mat-expansion-panel>
         </mat-accordion>
       </mat-card-content>
@@ -54,14 +60,14 @@
         <mat-accordion>
           <mat-expansion-panel class="accordion-style">
             <mat-expansion-panel-header>
-              <mat-panel-title style="font-size: calc(8px + 0.5vw);">
+              <mat-panel-title class="text-font-size">
                 Ryerson University
               </mat-panel-title>
-              <mat-panel-description>
+              <mat-panel-description *ngIf="!(isSmallScreen | async)">
                 2017 - 2021
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <p> Bachelor of Computer Engineering</p>
+            <p class="text-font-size"> Bachelor of Computer Engineering</p>
           </mat-expansion-panel>
         </mat-accordion>
       </mat-card-content>
@@ -69,5 +75,9 @@
 
 <!--  </div>-->
 </div>
+
+<ng-template #locationIfSmallScreen let-companyAndLocation='companyAndLocation'>
+  <p class="text-font-size" style="display: flex; justify-self: center; align-self: center; color: #FF5733">{{companyAndLocation}}</p>
+</ng-template>
 
 

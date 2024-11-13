@@ -29,3 +29,7 @@
 .card-style:hover{
   box-shadow: 0 0 10px 5px #FF5733;
 }
+
+.text-font-size{
+  font-size: calc(8px + 0.5vw);
+}
